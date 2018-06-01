@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron text-center">
+  <h1>Добро пожаловать</h1>
+  <p class="lead">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+  {% if session.logged_in == NULL %}
+    <a href="/register" class="btn btn-primary btn-lg">Регистрация</a>
+    <a href="/login" class="btn btn-success btn-lg">Войти</a>
+  {% endif %}
+</div>
+{% endblock %}
